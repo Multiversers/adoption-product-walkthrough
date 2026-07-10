@@ -3,31 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Use the Adoption Platform — Step-by-Step Guide</title>
+<title>The Hartford — Adoption Platform Guide for Underwriting Teams</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Trust Hartford is proprietary and unavailable on the web.
+     Source Serif 4 / Inter are the documented fallback pairing. */
   :root{
-    --ultraviolet:#4A5FF7;
-    --lunar50:#F8F7F3;
-    --eclipse:#DDFC9D;
-    --starlight:#E6E8FE;
-    --sunbeam:#FCD69D;
+    --claret:#75013F;
+    --fuchsia:#FE3082;
     --black:#000000;
-    --lunar700:#555553;
+    --white:#FFFFFF;
+    --warm-gray:#EAE5DF;
+    --off-white:#F3F2EF;
+    --mauve:#BA809F;
+    --muted:#5A5650;
+    --font-serif:'Source Serif 4','Source Serif Pro',Georgia,'Times New Roman',serif;
+    --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    font-family:'Inter',sans-serif;
-    background:var(--lunar50);
+    font-family:var(--font-sans);
+    background:var(--off-white);
     color:var(--black);
     line-height:1.5;
   }
-  a{color:var(--ultraviolet);}
+  a{color:var(--claret);}
   .hero{
-    background:var(--ultraviolet);
+    background:var(--claret);
     color:#fff;
     padding:56px 24px 64px;
   }
@@ -35,31 +40,45 @@
     max-width:880px;
     margin:0 auto;
   }
-  .logo{
-    height:24px;
+  .logo-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
     margin-bottom:32px;
+  }
+  .logo{
+    height:40px;
     display:block;
+  }
+  .co-brand{
+    font-family:var(--font-sans);
+    font-size:12px;
+    color:rgba(255,255,255,0.7);
+    letter-spacing:0.02em;
   }
   .eyebrow{
     display:inline-block;
-    background:var(--eclipse);
-    color:var(--black);
+    background:var(--off-white);
+    color:var(--claret);
     font-weight:600;
-    font-size:13px;
+    font-size:12px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
     padding:6px 14px;
     border-radius:999px;
     margin-bottom:20px;
   }
   h1.title{
-    font-size:44px;
-    font-weight:700;
-    letter-spacing:-0.02em;
-    line-height:1.08;
+    font-family:var(--font-serif);
+    font-size:46px;
+    font-weight:400;
+    letter-spacing:-0.01em;
+    line-height:1.1;
     margin:0 0 20px;
   }
   h1.title mark{
-    background:var(--eclipse);
-    color:var(--black);
+    background:var(--fuchsia);
+    color:var(--white);
     padding:0 8px;
     border-radius:6px;
     box-decoration-break:clone;
@@ -67,7 +86,7 @@
   }
   .hero p.sub{
     font-size:18px;
-    color:var(--starlight);
+    color:var(--warm-gray);
     max-width:640px;
     margin:0;
   }
@@ -87,8 +106,8 @@
   }
   .toc-card a{
     text-decoration:none;
-    color:var(--ultraviolet);
-    background:var(--starlight);
+    color:var(--claret);
+    background:var(--warm-gray);
     font-weight:600;
     font-size:13px;
     padding:8px 14px;
@@ -130,7 +149,7 @@
   .section-rule{
     height:4px;
     width:56px;
-    background:var(--eclipse);
+    background:var(--claret);
     border-radius:4px;
     margin:10px 0 28px 48px;
   }
@@ -163,7 +182,7 @@
     gap:10px;
   }
   .step-badge{
-    background:var(--ultraviolet);
+    background:var(--claret);
     color:#fff;
     font-weight:700;
     font-size:13px;
@@ -181,7 +200,7 @@
   }
   .step-text{
     font-size:15px;
-    color:var(--lunar700);
+    color:var(--muted);
     margin:0;
   }
   .step.no-media{
@@ -210,8 +229,8 @@
   }
   .cta{
     display:inline-block;
-    background:var(--eclipse);
-    color:var(--black);
+    background:var(--fuchsia);
+    color:var(--white);
     font-weight:700;
     font-size:14px;
     padding:12px 26px;
@@ -220,9 +239,20 @@
   }
   footer{
     text-align:center;
-    color:var(--lunar700);
+    color:var(--muted);
     font-size:13px;
     padding:24px;
+    line-height:1.6;
+  }
+  footer .classification{
+    font-size:11px;
+    color:var(--muted);
+    border-top:1px solid var(--warm-gray);
+    margin-top:12px;
+    padding-top:12px;
+    max-width:640px;
+    margin-left:auto;
+    margin-right:auto;
   }
 </style>
 </head>
@@ -230,10 +260,13 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <img class="logo" src="multiverse-logo.png" alt="Multiverse">
-    <span class="eyebrow">Adoption Platform Guide</span>
+    <div class="logo-row">
+      <img class="logo" src="hartford-stag-white.png" alt="The Hartford">
+      <span class="co-brand">Multiverse &times; The Hartford</span>
+    </div>
+    <span class="eyebrow">For The Hartford's Underwriting Teams</span>
     <h1 class="title">How to use the <mark>Adoption Platform</mark></h1>
-    <p class="sub">The Adoption Platform is Multiverse's home for putting AI to work on the job. It's a growing library of use cases showing exactly how people in roles like yours are already using it. The goal is simple: help you build real AI habits, one relevant use case at a time, instead of just hearing about the technology. This guide walks through finding a use case, trying it, and sharing what happened. Every step includes a short clip of exactly what to click.</p>
+    <p class="sub">The Adoption Platform helps The Hartford's underwriting teams put AI to work in daily underwriting: reviewing submissions, assessing risk, and drafting decisions faster and more consistently. It's a growing library of use cases showing exactly how underwriters like you are already using it. The goal is simple: build real AI habits, one relevant use case at a time. This guide walks through finding a use case, trying it, and sharing what happened. Every step includes a short clip of exactly what to click.</p>
   </div>
 </div>
 
@@ -386,7 +419,10 @@
 
 </main>
 
-<footer>Multiverse — Adoption Platform Guide</footer>
+<footer>
+  Multiverse &times; The Hartford — Adoption Platform Guide
+  <div class="classification">&copy; 2026 The Hartford. Classification: Company Confidential. No part of this document may be reproduced, published, or used without the permission of The Hartford.</div>
+</footer>
 
 </body>
 </html>
