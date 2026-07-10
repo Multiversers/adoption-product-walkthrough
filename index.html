@@ -81,10 +81,14 @@
     box-decoration-break:clone;
     -webkit-box-decoration-break:clone;
   }
+  .sub-columns{
+    display:flex;
+    gap:32px;
+  }
   .hero p.sub{
     font-size:18px;
     color:var(--warm-gray);
-    max-width:640px;
+    flex:1;
     margin:0;
   }
   nav.toc{
@@ -261,9 +265,12 @@
       <img class="logo" src="hartford-stag-white.png" alt="The Hartford">
       <img class="logo mv-logo" src="multiverse-logo.png" alt="Multiverse">
     </div>
-    <span class="eyebrow">For The Hartford's Underwriting Teams</span>
+    <span class="eyebrow">For The Hartford</span>
     <h1 class="title">How to use the <mark>Adoption Platform</mark></h1>
-    <p class="sub">The Adoption Platform helps The Hartford's underwriting teams put AI to work in daily underwriting: reviewing submissions, assessing risk, and drafting decisions faster and more consistently. It's a growing library of use cases showing exactly how underwriters like you are already using it. The goal is simple: build real AI habits, one relevant use case at a time. This guide walks through finding a use case, trying it, and sharing what happened. Every step includes a short clip of exactly what to click.</p>
+    <div class="sub-columns">
+      <p class="sub">The Adoption Platform helps The Hartford put AI to work across the business. It's a growing library of use cases showing exactly how people in roles like yours are already using it.</p>
+      <p class="sub">The goal is simple: build real AI habits, one relevant use case at a time. This guide walks through finding a use case, trying it, and sharing what happened. Every step includes a short clip of exactly what to click.</p>
+    </div>
   </div>
 </div>
 
