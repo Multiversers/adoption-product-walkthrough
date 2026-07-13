@@ -440,4 +440,68 @@
       </div>
     </div>
 
-    <div class
+    <div class="step">
+      <img src="step13_request_form.gif" alt="Request a Use Case form">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">2</div><div class="step-title">Request a use case</div></div>
+        <p class="step-text">If you have a problem you'd like AI to help with — or a solution you've already figured out that others should know about — click Request a Use Case. Fill in a few details, and an AI specialist will follow up to get it added to the platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s6">
+    <div class="section-head"><div class="section-num">6</div><h2>Keep coming back</h2></div>
+    <div class="section-rule"></div>
+
+    <p class="step-text">AI impact compounds — the more use cases you try, the more time you get back each week, and the more habits you build that stick. New use cases get added over time too, so there's always something fresh to try. Aim to check the platform a few times a week, not just once, and pick up a new use case each visit before your next check-in.</p>
+  </section>
+
+  <div class="closing">
+    <h3>Ready to try one?</h3>
+    <p>Open the Adoption Platform and pick a use case from your recommendations.</p>
+    <a class="cta" href="#s1">Back to the top ↑</a>
+  </div>
+
+</main>
+
+<footer>
+  Multiverse &times; The Hartford — Adoption Platform Guide
+  <div class="classification">&copy; 2026 The Hartford. Classification: Company Confidential. No part of this document may be reproduced, published, or used without the permission of The Hartford.</div>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  (function(){
+    var overlay = document.getElementById('lightbox');
+    var overlayImg = document.getElementById('lightbox-img');
+    var closeBtn = document.getElementById('lightbox-close');
+
+    function openLightbox(img){
+      overlayImg.src = img.src;
+      overlayImg.alt = img.alt || '';
+      overlay.classList.add('open');
+    }
+    function closeLightbox(){
+      overlay.classList.remove('open');
+      overlayImg.src = '';
+    }
+
+    document.querySelectorAll('.step img').forEach(function(img){
+      img.addEventListener('click', function(){ openLightbox(img); });
+    });
+    closeBtn.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', function(e){
+      if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeLightbox();
+    });
+  })();
+</script>
+
+</body>
+</html>
