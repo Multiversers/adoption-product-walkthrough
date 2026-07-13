@@ -34,10 +34,10 @@
   .hero{
     background:var(--claret);
     color:#fff;
-    padding:56px 24px 64px;
+    padding:56px 28px 62px;
   }
   .hero-inner{
-    max-width:880px;
+    max-width:1080px;
     margin:0 auto;
   }
   .logo-row{
@@ -93,9 +93,9 @@
     margin:0;
   }
   nav.toc{
-    max-width:880px;
+    max-width:1080px;
     margin:-30px auto 0;
-    padding:0 24px;
+    padding:0 26px;
   }
   .toc-card{
     background:#fff;
@@ -116,12 +116,12 @@
     border-radius:999px;
   }
   main{
-    max-width:880px;
+    max-width:1080px;
     margin:0 auto;
-    padding:56px 24px 24px;
+    padding:52px 26px 28px;
   }
   section.section{
-    margin-bottom:56px;
+    margin-bottom:52px;
   }
   .section-head{
     display:flex;
@@ -157,8 +157,8 @@
   }
   .step{
     display:grid;
-    grid-template-columns:340px 1fr;
-    gap:24px;
+    grid-template-columns:520px 1fr;
+    gap:28px;
     padding:20px 0;
     margin-bottom:8px;
     border-bottom:1px solid #E5E4DE;
@@ -172,6 +172,11 @@
     border-radius:10px;
     border:1px solid #eee;
     display:block;
+    cursor:zoom-in;
+    transition:opacity 0.15s ease;
+  }
+  .step img:hover{
+    opacity:0.9;
   }
   .step-body{
     display:flex;
@@ -208,9 +213,45 @@
   .step.no-media{
     grid-template-columns:1fr;
   }
-  @media(max-width:680px){
+  @media(max-width:860px){
     .step{grid-template-columns:1fr;}
     h1.title{font-size:32px;}
+  }
+  .lightbox-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.88);
+    z-index:1000;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+  }
+  .lightbox-overlay.open{
+    display:flex;
+  }
+  .lightbox-overlay img{
+    max-width:92vw;
+    max-height:88vh;
+    border-radius:10px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  }
+  .lightbox-close{
+    position:fixed;
+    top:20px;
+    right:28px;
+    background:rgba(255,255,255,0.12);
+    border:none;
+    color:#fff;
+    font-size:28px;
+    line-height:1;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    cursor:pointer;
+  }
+  .lightbox-close:hover{
+    background:rgba(255,255,255,0.22);
   }
   .closing{
     background:var(--black);
@@ -263,10 +304,9 @@
 <div class="hero">
   <div class="hero-inner">
     <div class="logo-row">
-      <img class="logo" src="hartford-stag-white.png" alt="The Hartford">
+      <img class="logo" src="hartford-logo-white.svg" alt="The Hartford">
       <img class="logo mv-logo" src="multiverse-logo.png" alt="Multiverse">
     </div>
-    <span class="eyebrow">For The Hartford</span>
     <h1 class="title">How to use the <mark>Adoption Platform</mark></h1>
     <div class="sub-columns">
       <p class="sub">The Adoption Platform helps The Hartford put AI to work across the business. It's a growing library of use cases showing exactly how people in roles like yours are already using it.</p>
@@ -400,35 +440,4 @@
       </div>
     </div>
 
-    <div class="step">
-      <img src="step13_request_form.gif" alt="Request a Use Case form">
-      <div class="step-body">
-        <div class="step-label"><div class="step-badge">2</div><div class="step-title">Request a use case</div></div>
-        <p class="step-text">If you have a problem you'd like AI to help with — or a solution you've already figured out that others should know about — click Request a Use Case. Fill in a few details, and an AI specialist will follow up to get it added to the platform.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="s6">
-    <div class="section-head"><div class="section-num">6</div><h2>Keep coming back</h2></div>
-    <div class="section-rule"></div>
-
-    <p class="step-text">AI impact compounds — the more use cases you try, the more time you get back each week, and the more habits you build that stick. New use cases get added over time too, so there's always something fresh to try. Aim to check the platform a few times a week, not just once, and pick up a new use case each visit before your next check-in.</p>
-  </section>
-
-  <div class="closing">
-    <h3>Ready to try one?</h3>
-    <p>Open the Adoption Platform and pick a use case from your recommendations.</p>
-    <a class="cta" href="#s1">Back to the top ↑</a>
-  </div>
-
-</main>
-
-<footer>
-  Multiverse &times; The Hartford — Adoption Platform Guide
-  <div class="classification">&copy; 2026 The Hartford. Classification: Company Confidential. No part of this document may be reproduced, published, or used without the permission of The Hartford.</div>
-</footer>
-
-</body>
-</html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    <div class
